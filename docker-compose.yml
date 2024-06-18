@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+  zd_user_server:
+    container_name: zd_user_server
+    image: zdsoft-registry.cn-beijing.cr.aliyuncs.com/sass/zd_user_server:1.0
+    restart: always
+    init: true
+    working_dir: /tmp
+    ports:
+      - "9001:9001"
+    environment:
+      - "TZ=Asia/Shanghai"
